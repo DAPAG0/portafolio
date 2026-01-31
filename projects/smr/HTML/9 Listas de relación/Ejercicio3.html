@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Listas de selección</title>
+    <style>
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <form action="mailto:ejemplo@gmail.com" method="post" autocomplete="off">
+        <table>
+            <tr>
+                <td rowspan="2"><img src="imagenes/restaurante.jpg" alt="restaurante"></td>
+                <td><h2>Restaurante Chicote</h2></td>
+            </tr>
+            <tr>
+                <td><h3>Menú</h3></td>
+            </tr>
+            <tr>
+                <td>Primeros</td>
+                <td>    
+                    <select name="Primeros" id="primeros" size="4" multiple>
+                        <option value="1">Judías blancas con oreja</option>
+                        <option value="2">Paella</option>
+                        <option value="3">Revuelto de gulas</option>
+                        <option value="4">Ensalada de la casa</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Segundos</td>
+                <td>    
+                    <select name="Segundos" id="segundos" size="4" required multiple>
+                        <option value="1">Ragout en su jugo</option>
+                        <option value="2">Alitas de pollo</option>
+                        <option value="3">Cachopo asturiano</option>
+                        <option value="4">Abanico de calamar</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Hacer pedido"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
