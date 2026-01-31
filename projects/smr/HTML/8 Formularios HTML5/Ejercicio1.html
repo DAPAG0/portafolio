@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularios</title>
+</head>
+<body>
+    <form action="mailto:prueba@gmail.com" autocomplete="off" method="post">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <ul>
+                <li><label for="nombre">Nombre</label>  <input id="nombre" type="text" name="nombre" placeholder="Escribe tu nombre"></li>
+                
+                <li><label for="email">Email</label>  <input id="email" type="text" name="email" placeholder="user@dominio.com" maxlength="50"></li>
+                
+                <li><label for="fecha">Fecha de nacimiento</label>  <input id="fecha" type="text" name="fecha" placeholder="dd/MM/yyyy"></li>
+                
+                <li><label for="tlf">Teléfono</label>  <input id="tlf" type="text" name="tlf" placeholder="Ej. 8787987878"></li>
+                
+                <li><label for="pais">País</label>  <input id="pais" type="text" name="pais" required></li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>Datos de tarjeta de crédito</legend>
+            <ul>
+              <li><label for="numero">Número</label>  <input id="numero" type="text" name="numero" placeholder="Ej. 8787987878"></li>
+              <li><label for="name">Nombre</label>  <input id="name" type="text" name="name" placeholder="Nombre exacto"></li>  
+            </ul>
+        </fieldset>
+        <input type="submit" value="Realizar compra">
+    </form>
+</body>
+</html>

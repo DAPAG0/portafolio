@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Introducción</title>
+</head>
+<body>
+    <h1 style="color:blue">EJEMPLO 1</h1>
+    <p>Los campos marcados con * son de inserción obligatoria</p>
+    <form action="mailto:pruba@gmail.com" method="post" autocomplete="off">
+        <p>
+            <label for="asunto" >Asunto:</label>
+            <input  id="asunto" type="text" name="asunto" placeholder="Asunto">
+        </p>
+        <p>
+            <label for="apellido1">* Primer Apellido:</label>
+            <input  id="apellido1" type="text" required name="apellido1" placeholder="Primer Apellido">
+        </p>
+        <p>
+            <label for="apellido2">Segundo Apellido:</label>
+            <input  id="apellido2" type="text" name="apellido2" placeholder="Segundo Apellido">
+        </p>
+        <p>
+            <label for="nombre">* Nombre</label>
+            <input  id="nombre" type="text" required name="nombre" placeholder="Nombre">
+        </p>
+        <p>
+            <label for="dni">D.N.I / Pasaporte / N.I.E</label>
+            <input  id="dni" type="text" maxlength="9" name="dni" placeholder="Ej: 65212478E">
+        </p>
+        <p>
+            <label for="correo">* Correo electrónico:</label>
+            <input  id="correo" type="text" required name="correo" placeholder="Ej: correoejemplo@gmail.com" size="25">
+        </p>
+        <p>
+            <label for="tlf">Teléfono:</label>
+            <input  id="tlf" type="text" name="tlf" maxlength="9" placeholder="Ej: 652458753">
+        </p>
+        <p>
+            <input type="submit" value="Enviar formulario">
+        </p>
+        <hr>
+        <h3>Asignatura Favorita</h3>
+    </form>
+    <form action="mailto:prueba@gmail.com" method="post" autocomplete="off">
+        <p>
+            <label for="SOR">SOR</label>
+            <input type="radio" id="SOR" name="fav" value="SOR">
+        </p>
+        <p>
+            <label for="EMP">EMP</label>
+            <input type="radio" id="EMP" name="fav" value="EMP">
+        </p>
+        <p>
+            <label for="ING">ING</label>
+            <input type="radio" id="ING" name="fav" value="ING">
+        </p>
+        <p>
+            <label for="SR">SR</label>
+            <input type="radio" id="SR" name="fav" value="SR">
+        </p>
+        <p>
+            <label for="AW">AW</label>
+            <input type="radio" id="AW" name="fav" value="AW">
+        </p>
+        <p>
+            <label for="SEG">SEG</label>
+            <input type="radio" id="SEG" name="fav" value="SEG">
+        </p>
+    </form>
+    <hr>
+    <h3>Asignaturas más difíciles</h3>
+<form action="mailto:prueba@gmail.com" method="post" autocomplete="off">
+    <p>
+        <label for="SOR">SOR</label>
+        <input type="checkbox" id="SOR1" name="SOR" value="SOR">
+    </p>
+    <p>
+        <label for="EMP">EMP</label>
+        <input type="checkbox" id="EMP1" name="EMP" value="EMP">
+    </p>
+    <p>
+        <label for="ING">ING</label>
+        <input type="checkbox" id="ING1" name="ING" value="ING">
+    </p>
+    <p>
+        <label for="SR">SR</label>
+        <input type="checkbox" id="SR1" name="SR" value="SR">
+    </p>
+    <p>
+        <label for="AW">AW</label>
+        <input type="checkbox" id="AW1" name="SR" value="AW">
+    </p>
+    <p>
+        <label for="SEG">SEG</label>
+        <input type="checkbox" id="SEG1" name="SR" value="SEG">
+    </p>
+</form>
+</body>
+</html>

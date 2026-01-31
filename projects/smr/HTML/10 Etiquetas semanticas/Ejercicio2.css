@@ -1,0 +1,98 @@
+h1, h3, a {
+            
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    }
+            header {
+            
+            background-image:url("Recursos/background2.jpg");
+    }
+            html {
+            
+            background-color:rgb(211, 247, 246);
+    }
+            .acero {
+            position: relative;
+            top: 1px; left: 25px ;
+    }
+            .agua {
+            position: relative;
+            top: 1px; left: 25px ;
+    }
+            .bicho {
+            position: relative;
+            top: 1px; left: 25px ;
+    }
+            .dragon {
+            position: relative;
+            top: 1px; left: 25px ;
+    }
+            .electrico {
+            position: relative;
+            top: 1px; left: 25px ;
+    }
+            .fantasma {
+            position: relative;
+            top: 1px; left: 25px ;
+    }
+            .fuego {
+            position: relative;
+            top: 1px; left: 25px ;
+    }
+            .hada {
+            position: relative;
+            top: 1px; left: 25px ;
+    }
+            .hielo {
+            position: relative;
+            top: 1px; left: 25px ;
+    }
+            .lucha {
+            position: relative;
+            top: 1px; left: 25px ;
+    }
+            .normal {
+            position: relative;
+            top: 1px; left: 25px ;
+    }
+            .planta {
+            position: relative;
+            top: 1px; left: 25px ;
+    }
+            .psiquico {
+            position: relative;
+            top: 1px; left: 25px ;
+    }
+            .roca {
+            position: relative;
+            top: 1px; left: 25px ;
+    }
+            .tierra {
+            position: relative;
+            top: 1px; left: 25px ;
+    }
+            .veneno {
+            position: relative;
+            top: 1px; left: 25px ;
+    }
+            .volador {
+            position: relative;
+            top: 1px; left: 25px ;
+    }
+            .siniestro {
+            position: relative;
+            top: 1px; left: 25px ;
+    }
+    
+            .arriba {
+            position: relative;
+            top: 5px; left: 30px ;
+    }
+            .pikachu {
+            position: relative;
+            left: 10px;
+    }
+            .mewtwo {
+            position: relative;
+            left: 20px;
+    }
