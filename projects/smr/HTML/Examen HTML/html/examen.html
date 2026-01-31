@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Examen HTML</title>
+        <style>
+            table, th, td {
+            border: 1.5px solid black;
+            border-collapse: collapse;
+            }
+            footer {
+            position: fixed;
+            bottom: 4px;
+            left: 0;
+            background-color: #BEBBB1;
+            color: white;
+            font-weight: bold;
+            width: 100%;
+            max-height: 20vh;
+            font-size: 2vh;border-radius: 10px;
+            }
+            img {
+            max-height: 10vh;
+            }
+            </style>
+    </head>
+    <body>
+        <h1>Comprar billetes de Autobús</h1>
+        <nav>
+            <a href="#instrucciones">Instrucciones</a> <a href="../recursos/politica_privacidad.html">Política de privacidad</a>
+        </nav>
+        <h2 id="instrucciones">Instrucciones</h2>
+        <ol>
+            <li>Rellene la tabla que se muestra a continuación</li>
+            <li>Pulse el boton de comprar billete</li>
+            <li>Seleccione el método de pago correspondiente</li>
+        </ol>
+        <section>
+            <h2>Seleccione sus billetes</h2>
+        <form action="mailto:ejemplo@gmail.com" method="post" autocomplete="off">
+        <table>
+            <caption>Billetes de autobús</caption>
+            <thead>
+                <tr>
+                    <th colspan="5">AvanzaBus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="4"><a href="https://www.avanzabus.com"><img src="../recursos/logobus.png" alt="logobus"></a></td>
+                    <td><label for="fecha">Fecha de uso</label></td>
+                    <td><input type="date" name="FECHA" id="fecha"></td>
+                    <td>Tipo</td>
+                    <td>
+                        <label for="ida">Ida</label><input type="radio" name="tipo" id="ida">
+                        <label for="idayvuelta">Ida y Vuelta</label><input type="radio" name="tipo" id="idayvuelta">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="billete" title="Introduzca el número de billetes que desea comprar">Número billetes</label></td>
+                    <td><input type="number" name="billetesnumero" id="billete" min="0" max="10"></td>
+                    <td>¿Recibir confirmación?</td>
+                    <td>
+                        <input type="checkbox" name="1" id="info1">
+                        <label for="info1">SMS</label>
+                        <input type="checkbox" name="2" id="info2">
+                        <label for="info2">E-mail</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="usuario">Usuario</label></td>
+                    <td><input type="email" name="email" id="usuario" maxlength="100" required placeholder="Introduzca email"></td>
+                    <td>Origen</td>
+                    <td>
+                        <datalist id="lista">
+                            <option value="Madrid"></option>
+                            <option value="Salamanca"></option>
+                            <option value="Sevilla"></option>
+                            <option value="Barcelona"></option>
+                        </datalist>
+                        <label for="ciudades1"></label>
+                        <input list="lista" name="grupo1" id="ciudades1">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="contraseña">Contraseña</label></td>
+                    <td><input type="password" name="cont" id="contraseña"></td>
+                    <td>Destino</td>
+                    <td>
+                        <label for="ciudades2"></label>
+                        <input list="lista" name="grupo2" id="ciudades2">
+                    </td>
+                </tr>
+            </tbody>
+           <tfoot>
+                <tr>
+                    <td colspan="3"><input type="reset" value="Resetear forulario"></td>
+                    <td colspan="2"><input type="submit" value="Comprar billete"></td>
+                </tr>
+           </tfoot>     
+        </table>
+        </form>
+        </section>
+        
+        <footer>
+            Teléfono: +34 912 722 832 / +34 900 921 895 Mail: info.LD@avanzagrupo.com
+        </footer>
+    </body>
+</html>
