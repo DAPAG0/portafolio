@@ -1,0 +1,81 @@
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.img-proyecto {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/*MENU PRINCIPAL*/
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(39, 39, 39);
+    display: flex;
+    justify-content: center;
+}
+
+/*Elementos menu*/
+nav ul li {
+    font-size: large;
+    position: relative;
+}
+
+/*Enlaces menu*/
+nav ul li a {
+    display: block;
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: rgb(28, 97, 187);
+    transition: background-color 0.3s;
+}
+
+/*MENU DESPLEGABLE*/
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0;
+    box-shadow: 5px 5px 4px rgba(0,0,0,0.5);
+}
+
+/*Elementos menu desplegable*/
+nav ul ul li{
+    float: none;
+    width: 150px;
+}
+
+/*Enlaces menu desplegaable*/
+nav ul ul li a {
+    line-height: 120%;
+    padding: 10px 15px;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+/*PIE DE PAGINA*/
+footer a {
+    text-decoration: none;
+}
+
+#correo {
+    color: white;
+}
