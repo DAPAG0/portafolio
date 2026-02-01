@@ -59,32 +59,35 @@ nav ul li a:hover, .nav-link-active {
     background-color: rgb(28, 97, 187) !important;
 }
 
-/* --- MENU DESPLEGABLE (CORREGIDO) --- */
+/* --- MENU DESPLEGABLE--- */
 nav ul ul {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 98%; 
     left: 0;
     padding: 0;
-    /* Creamos un "puente" de 10px para que el menú no se cierre al mover el ratón */
-    padding-top: 10px; 
+    margin: 0;
     box-shadow: 5px 5px 4px rgba(0,0,0,0.5);
-    background-color: transparent; /* Fondo transparente para el puente */
+    background-color: rgb(39, 39, 39);
     z-index: 1001;
 }
 
-/* Fondo real solo para los elementos de la lista */
+/* Fondo para los elementos del submenú */
 nav ul ul li {
     background-color: rgb(39, 39, 39);
     float: none;
     width: 150px;
+    border: none;
 }
 
+/* Ajuste de enlaces en el submenú */
 nav ul ul li a {
     line-height: 120%;
     padding: 10px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
 }
 
+/* El hover se mantiene igual */
 nav ul li:hover > ul {
     display: block;
 }
