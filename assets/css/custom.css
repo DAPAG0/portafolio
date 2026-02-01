@@ -9,14 +9,30 @@ h2 {
     font-weight: bold;
 }
 
+/* Imagen pequeña y adaptada */
 .img-proyecto {
     width: 100%;
-    height: 200px;
+    height: 140px; 
     object-fit: cover;
     object-position: center;
 }
 
-/*MENU PRINCIPAL*/
+/* TRUNCADO DE TEXTO: Webkit y Estándar */
+.text-truncate-custom {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    line-clamp: 2;       
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 0.85rem;
+    min-height: 2.6em; 
+}
+
+[id] {
+    scroll-margin-top: 100px; 
+}
+
+/* --- MENU PRINCIPAL --- */
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -26,42 +42,44 @@ nav ul {
     justify-content: center;
 }
 
-/*Elementos menu*/
 nav ul li {
     font-size: large;
     position: relative;
 }
 
-/*Enlaces menu*/
 nav ul li a {
     display: block;
     color: white;
     padding: 15px 20px;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-nav ul li a:hover {
-    background-color: rgb(28, 97, 187);
-    transition: background-color 0.3s;
+nav ul li a:hover, .nav-link-active {
+    background-color: rgb(28, 97, 187) !important;
 }
 
-/*MENU DESPLEGABLE*/
+/* --- MENU DESPLEGABLE (CORREGIDO) --- */
 nav ul ul {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     padding: 0;
+    /* Creamos un "puente" de 10px para que el menú no se cierre al mover el ratón */
+    padding-top: 10px; 
     box-shadow: 5px 5px 4px rgba(0,0,0,0.5);
+    background-color: transparent; /* Fondo transparente para el puente */
+    z-index: 1001;
 }
 
-/*Elementos menu desplegable*/
-nav ul ul li{
+/* Fondo real solo para los elementos de la lista */
+nav ul ul li {
+    background-color: rgb(39, 39, 39);
     float: none;
     width: 150px;
 }
 
-/*Enlaces menu desplegaable*/
 nav ul ul li a {
     line-height: 120%;
     padding: 10px 15px;
@@ -71,11 +89,86 @@ nav ul li:hover > ul {
     display: block;
 }
 
-/*PIE DE PAGINA*/
+/* --- ANIMACIÓN DE CARDS (FADE IN/OUT) --- */
+.fade-in-card {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.fade-in-card.visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+/* --- ESTRUCTURA DE LA CARD PARA BOTÓN ABAJO --- */
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* --- PIE DE PAGINA --- */
 footer a {
     text-decoration: none;
 }
 
 #correo {
     color: white;
+}
+
+/* --- RESPONSIVE PARA MÓVILES --- */
+@media (max-width: 768px) {
+    [id] {
+        /* Margen alto para compensar el menú vertical en móvil */
+        scroll-margin-top: 400px; 
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav ul ul {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        background-color: rgb(50, 50, 50);
+        padding-top: 0;
+        display: none; 
+    }
+
+    /* Mantenemos el submenú abierto si se pulsa o se está dentro */
+    nav ul li:active > ul, 
+    nav ul li:focus-within > ul,
+    nav ul li:hover > ul {
+        display: block;
+    }
+
+    nav ul ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.4rem; }
+
+    .img-proyecto {
+        height: 110px;
+    }
 }
